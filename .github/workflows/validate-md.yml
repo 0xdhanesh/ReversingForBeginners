@@ -2,7 +2,7 @@ name: Validate Markdown Structure
 
 on:
   push:
-    branches: [ main ]
+    branches: [ * ]
   pull_request:
 
 jobs:

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Template/Linux ARM Mac.md",
+                "file": "basics/hello world/Linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux ARM Mac"
+              "title": "Linux"
             }
           }
         ]
@@ -171,11 +171,22 @@
   },
   "active": "03362a0bdba1548b",
   "lastOpenFiles": [
-    "Template/Always Check.md",
-    "README.md",
+    "Template/Topics to explore in the future.md",
     "Template/Linux ARM Mac.md",
+    "Template/Always Check.md",
+    "basics/hello world/Linux.md",
+    "basics/hello world/00_Hello World/linux_Build/64bit_Secure_hello_world",
+    "basics/hello world/00_Hello World/linux_Build/64bit_InSecure_hello_world",
+    "basics/hello world/00_Hello World/linux_Build/32bit_Secure_hello_world",
+    "basics/hello world/00_Hello World/linux_Build/32bit_InSecure_hello_world",
+    "basics/hello world/00_Hello World/aarch64_Build/64bit_Secure_hello_world",
+    "basics/hello world/00_Hello World/aarch64_Build/64bit_InSecure_hello_world",
+    "basics/hello world/00_Hello World/aarch64_Build/32bit_Secure_hello_world",
+    "basics/hello world/00_Hello World/aarch64_Build/32bit_InSecure_hello_world",
+    "basics/hello world/00_Hello World/Windows_Build_64/64bit_Secure_hello_world.exe",
+    "basics/hello world/00_Hello World/Windows_Build_64/64bit_InSecure_hello_world.exe",
+    "README.md",
     "Template/Windows.md",
-    "Template",
     "Untitled.md"
   ]
 }

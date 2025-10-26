@@ -48,9 +48,9 @@ def validate_notes_after_code(filepath):
                 # Note should not be another heading or code block
                 if not note_line or note_line.startswith('#') or note_line.startswith('```'):
                     if current_heading:
-                        errors.append(f"Missing notes in {current_heading}")
+                        errors.append(f"Missing note after code block in {current_heading}")
                     else:
-                        errors.append(f"No note found after code block ending at line {j+1}")
+                        errors.append(f"Missing note after code block (no preceding heading)")
             else:
                 errors.append(f"Unclosed code block starting at line {i+1}")
             i = j

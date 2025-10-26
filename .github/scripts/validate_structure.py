@@ -31,7 +31,13 @@ def validate_notes_after_code(filepath):
         lines = [line.rstrip('\n') for line in f.readlines()]
     errors = []
     i = 0
+    current_heading = None
+    
     while i < len(lines):
+        # Track the most recent heading
+        if re.match(r'^#+\s+', lines[i]):
+            current_heading = lines[i].strip().lstrip('#').strip()
+        
         if lines[i].startswith('```'):
             # Search for code block end
             j = i + 1
@@ -41,7 +47,10 @@ def validate_notes_after_code(filepath):
                 note_line = lines[j+1].strip()
                 # Note should not be another heading or code block
                 if not note_line or note_line.startswith('#') or note_line.startswith('```'):
-                    errors.append(f"No note found after code block ending at line {j+1}")
+                    if current_heading:
+                        errors.append(f"Missing notes in {current_heading}")
+                    else:
+                        errors.append(f"No note found after code block ending at line {j+1}")
             else:
                 errors.append(f"Unclosed code block starting at line {i+1}")
             i = j
